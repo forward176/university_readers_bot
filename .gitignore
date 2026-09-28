@@ -1,0 +1,11 @@
+.env
+
+.bot.dp
+
+venv/
+.venv/
+env/
+
+__pycashe__/
+
+.idea/
