@@ -1,6 +1,11 @@
-import telebot
-#todo: найти косяк программы, добавить токен бота
+from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-# @bot.message.handler(commands=["start"])
-# def start_buttons(message):
-#     bot.send_message(message,  "hello")
+
+def main_menu_kb():
+    """Главное меню."""
+    kb = InlineKeyboardMarkup()
+    kb.row(InlineKeyboardButton("Отметить чтение", callback_data="report"))
+    kb.row(InlineKeyboardButton("Моя библиотека", callback_data="library"))
+    kb.row(InlineKeyboardButton("Рейтинг", callback_data="rating"))
+    kb.row(InlineKeyboardButton("Профиль", callback_data="profile"))
+    return kb
